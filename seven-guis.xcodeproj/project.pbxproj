@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C0FC32E32827E2AA00D06192 /* seven_guisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* seven_guisApp.swift */; };
-		C0FC32E42827E2AA00D06192 /* seven_guisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* seven_guisApp.swift */; };
-		C0FC32E52827E2AA00D06192 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D42827E2A800D06192 /* ContentView.swift */; };
-		C0FC32E62827E2AA00D06192 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D42827E2A800D06192 /* ContentView.swift */; };
+		C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
+		C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E72827E2AA00D06192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FC32D52827E2AA00D06192 /* Assets.xcassets */; };
 		C0FC32E82827E2AA00D06192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FC32D52827E2AA00D06192 /* Assets.xcassets */; };
+		C0FC32F32827E39700D06192 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32F22827E39700D06192 /* CounterView.swift */; };
+		C0FC32F42827E39700D06192 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32F22827E39700D06192 /* CounterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C0FC32D32827E2A800D06192 /* seven_guisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seven_guisApp.swift; sourceTree = "<group>"; };
-		C0FC32D42827E2A800D06192 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenGuisApp.swift; sourceTree = "<group>"; };
 		C0FC32D52827E2AA00D06192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0FC32DA2827E2AA00D06192 /* seven-guis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seven-guis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FC32E02827E2AA00D06192 /* seven-guis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seven-guis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0FC32E22827E2AA00D06192 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		C0FC32F22827E39700D06192 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 		C0FC32D22827E2A800D06192 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				C0FC32D32827E2A800D06192 /* seven_guisApp.swift */,
-				C0FC32D42827E2A800D06192 /* ContentView.swift */,
+				C0FC32F12827E38100D06192 /* 01 - Counter */,
+				C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */,
 				C0FC32D52827E2AA00D06192 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -76,6 +76,14 @@
 				C0FC32E22827E2AA00D06192 /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		C0FC32F12827E38100D06192 /* 01 - Counter */ = {
+			isa = PBXGroup;
+			children = (
+				C0FC32F22827E39700D06192 /* CounterView.swift */,
+			);
+			path = "01 - Counter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,8 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FC32E52827E2AA00D06192 /* ContentView.swift in Sources */,
-				C0FC32E32827E2AA00D06192 /* seven_guisApp.swift in Sources */,
+				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
+				C0FC32F32827E39700D06192 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FC32E62827E2AA00D06192 /* ContentView.swift in Sources */,
-				C0FC32E42827E2AA00D06192 /* seven_guisApp.swift in Sources */,
+				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
+				C0FC32F42827E39700D06192 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
