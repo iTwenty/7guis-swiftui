@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C073B4FC2827F89F0027412A /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FB2827F89F0027412A /* TempConverterView.swift */; };
+		C073B4FD2827F89F0027412A /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FB2827F89F0027412A /* TempConverterView.swift */; };
 		C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E72827E2AA00D06192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FC32D52827E2AA00D06192 /* Assets.xcassets */; };
@@ -16,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C073B4FB2827F89F0027412A /* TempConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterView.swift; sourceTree = "<group>"; };
 		C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenGuisApp.swift; sourceTree = "<group>"; };
 		C0FC32D52827E2AA00D06192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0FC32DA2827E2AA00D06192 /* seven-guis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seven-guis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -42,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C073B4FA2827F8540027412A /* 02 - Temperature Converter */ = {
+			isa = PBXGroup;
+			children = (
+				C073B4FB2827F89F0027412A /* TempConverterView.swift */,
+			);
+			path = "02 - Temperature Converter";
+			sourceTree = "<group>";
+		};
 		C0FC32CD2827E2A800D06192 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +66,7 @@
 			isa = PBXGroup;
 			children = (
 				C0FC32F12827E38100D06192 /* 01 - Counter */,
+				C073B4FA2827F8540027412A /* 02 - Temperature Converter */,
 				C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */,
 				C0FC32D52827E2AA00D06192 /* Assets.xcassets */,
 			);
@@ -186,6 +198,7 @@
 			files = (
 				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F32827E39700D06192 /* CounterView.swift in Sources */,
+				C073B4FC2827F89F0027412A /* TempConverterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +208,7 @@
 			files = (
 				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F42827E39700D06192 /* CounterView.swift in Sources */,
+				C073B4FD2827F89F0027412A /* TempConverterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +339,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -355,7 +369,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -389,7 +403,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.itwenty.seven-guis";
 				PRODUCT_NAME = "seven-guis";
@@ -417,7 +431,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.itwenty.seven-guis";
 				PRODUCT_NAME = "seven-guis";
