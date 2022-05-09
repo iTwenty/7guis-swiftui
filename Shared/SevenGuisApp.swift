@@ -8,7 +8,8 @@
 import SwiftUI
 
 var tasks = ["01 - Counter",
-             "02 - Temperature Converter"]
+             "02 - Temperature Converter",
+             "03 - Flight Booker"]
 
 @main
 struct SevenGuisApp: App {
@@ -29,6 +30,7 @@ struct SevenGuisApp: App {
         switch task {
         case tasks[0]: CounterView()
         case tasks[1]: TempConverterView()
+        case tasks[2]: FlightBookerView()
         default: Text("No task found!")
         }
     }
