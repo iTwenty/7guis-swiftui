@@ -29,7 +29,6 @@ struct TempConverterView: View {
         VStack {
             HStack {
                 TextField("", text: $celsiusString)
-                    .frame(width: 50)
                     .onChange(of: celsiusString) { newValue in
                         if case .user = celsiusChangeSource {
                             if let c = Double(newValue) {
@@ -44,7 +43,6 @@ struct TempConverterView: View {
             Text("=")
             HStack {
                 TextField("", text: $farenString)
-                    .frame(width: 50)
                     .onChange(of: farenString) { newValue in
                         if case .user = farenChangeSource {
                             if let f = Double(newValue) {
@@ -56,7 +54,7 @@ struct TempConverterView: View {
                     }
                 Text("Farenheit")
             }
-        }
+        }.frame(width: 300)
     }
     private func c2f(_ c: Double) -> Double { c * 9 / 5 + 32 }
     private func f2c(_ f: Double) -> Double { (f - 32) * 5 / 9 }

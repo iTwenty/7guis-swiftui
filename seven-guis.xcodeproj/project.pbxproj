@@ -11,6 +11,8 @@
 		C073B4FD2827F89F0027412A /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FB2827F89F0027412A /* TempConverterView.swift */; };
 		C073B500282838050027412A /* FlightBookerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FF282838050027412A /* FlightBookerView.swift */; };
 		C073B501282838050027412A /* FlightBookerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FF282838050027412A /* FlightBookerView.swift */; };
+		C073B505282910B90027412A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B504282910B90027412A /* TimerView.swift */; };
+		C073B506282910B90027412A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B504282910B90027412A /* TimerView.swift */; };
 		C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E72827E2AA00D06192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FC32D52827E2AA00D06192 /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 /* Begin PBXFileReference section */
 		C073B4FB2827F89F0027412A /* TempConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterView.swift; sourceTree = "<group>"; };
 		C073B4FF282838050027412A /* FlightBookerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBookerView.swift; sourceTree = "<group>"; };
+		C073B504282910B90027412A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenGuisApp.swift; sourceTree = "<group>"; };
 		C0FC32D52827E2AA00D06192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0FC32DA2827E2AA00D06192 /* seven-guis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seven-guis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +67,14 @@
 			path = "03 - Flight Booker";
 			sourceTree = "<group>";
 		};
+		C073B502282910950027412A /* 04 - Timer */ = {
+			isa = PBXGroup;
+			children = (
+				C073B504282910B90027412A /* TimerView.swift */,
+			);
+			path = "04 - Timer";
+			sourceTree = "<group>";
+		};
 		C0FC32CD2827E2A800D06192 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +90,7 @@
 				C0FC32F12827E38100D06192 /* 01 - Counter */,
 				C073B4FA2827F8540027412A /* 02 - Temperature Converter */,
 				C073B4FE282837E80027412A /* 03 - Flight Booker */,
+				C073B502282910950027412A /* 04 - Timer */,
 				C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */,
 				C0FC32D52827E2AA00D06192 /* Assets.xcassets */,
 			);
@@ -208,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C073B505282910B90027412A /* TimerView.swift in Sources */,
 				C073B500282838050027412A /* FlightBookerView.swift in Sources */,
 				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F32827E39700D06192 /* CounterView.swift in Sources */,
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C073B506282910B90027412A /* TimerView.swift in Sources */,
 				C073B501282838050027412A /* FlightBookerView.swift in Sources */,
 				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F42827E39700D06192 /* CounterView.swift in Sources */,
