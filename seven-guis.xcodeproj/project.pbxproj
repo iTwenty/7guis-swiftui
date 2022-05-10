@@ -15,6 +15,8 @@
 		C073B506282910B90027412A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B504282910B90027412A /* TimerView.swift */; };
 		C073B509282942390027412A /* CrudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B508282942390027412A /* CrudView.swift */; };
 		C073B50A282942390027412A /* CrudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B508282942390027412A /* CrudView.swift */; };
+		C073B50D282A44770027412A /* CircleDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B50C282A44770027412A /* CircleDrawerView.swift */; };
+		C073B50E282A44770027412A /* CircleDrawerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B50C282A44770027412A /* CircleDrawerView.swift */; };
 		C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */; };
 		C0FC32E72827E2AA00D06192 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0FC32D52827E2AA00D06192 /* Assets.xcassets */; };
@@ -28,6 +30,7 @@
 		C073B4FF282838050027412A /* FlightBookerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBookerView.swift; sourceTree = "<group>"; };
 		C073B504282910B90027412A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C073B508282942390027412A /* CrudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrudView.swift; sourceTree = "<group>"; };
+		C073B50C282A44770027412A /* CircleDrawerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDrawerView.swift; sourceTree = "<group>"; };
 		C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenGuisApp.swift; sourceTree = "<group>"; };
 		C0FC32D52827E2AA00D06192 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0FC32DA2827E2AA00D06192 /* seven-guis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "seven-guis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +89,14 @@
 			path = "05 - Crud";
 			sourceTree = "<group>";
 		};
+		C073B50B282A44580027412A /* 06 - Circle Drawer */ = {
+			isa = PBXGroup;
+			children = (
+				C073B50C282A44770027412A /* CircleDrawerView.swift */,
+			);
+			path = "06 - Circle Drawer";
+			sourceTree = "<group>";
+		};
 		C0FC32CD2827E2A800D06192 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +114,7 @@
 				C073B4FE282837E80027412A /* 03 - Flight Booker */,
 				C073B502282910950027412A /* 04 - Timer */,
 				C073B507282942200027412A /* 05 - Crud */,
+				C073B50B282A44580027412A /* 06 - Circle Drawer */,
 				C0FC32D32827E2A800D06192 /* SevenGuisApp.swift */,
 				C0FC32D52827E2AA00D06192 /* Assets.xcassets */,
 			);
@@ -235,6 +247,7 @@
 				C073B509282942390027412A /* CrudView.swift in Sources */,
 				C073B505282910B90027412A /* TimerView.swift in Sources */,
 				C073B500282838050027412A /* FlightBookerView.swift in Sources */,
+				C073B50D282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F32827E39700D06192 /* CounterView.swift in Sources */,
 				C073B4FC2827F89F0027412A /* TempConverterView.swift in Sources */,
@@ -248,6 +261,7 @@
 				C073B50A282942390027412A /* CrudView.swift in Sources */,
 				C073B506282910B90027412A /* TimerView.swift in Sources */,
 				C073B501282838050027412A /* FlightBookerView.swift in Sources */,
+				C073B50E282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F42827E39700D06192 /* CounterView.swift in Sources */,
 				C073B4FD2827F89F0027412A /* TempConverterView.swift in Sources */,
