@@ -12,7 +12,8 @@ var tasks = ["01 - Counter",
              "03 - Flight Booker",
              "04 - Timer",
              "05 - CRUD",
-             "06 - Circle Drawer"]
+             "06 - Circle Drawer",
+             "07 - Cells"]
 
 @main
 struct SevenGuisApp: App {
@@ -37,6 +38,7 @@ struct SevenGuisApp: App {
         case tasks[3]: TimerView()
         case tasks[4]: CrudView()
         case tasks[5]: CircleDrawerView()
+        case tasks[6]: CellsView()
         default: Text("No task found!")
         }
     }
