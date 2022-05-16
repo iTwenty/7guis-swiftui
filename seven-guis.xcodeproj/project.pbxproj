@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00746702832761F00D2BA77 /* CellFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007466F2832761F00D2BA77 /* CellFormula.swift */; };
+		C00746712832761F00D2BA77 /* CellFormula.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007466F2832761F00D2BA77 /* CellFormula.swift */; };
 		C0578D69282CF7CD00388368 /* CellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0578D68282CF7CD00388368 /* CellsView.swift */; };
 		C0578D6A282CF7FA00388368 /* CellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0578D68282CF7CD00388368 /* CellsView.swift */; };
 		C073B4FC2827F89F0027412A /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FB2827F89F0027412A /* TempConverterView.swift */; };
@@ -28,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C007466F2832761F00D2BA77 /* CellFormula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellFormula.swift; sourceTree = "<group>"; };
 		C0578D68282CF7CD00388368 /* CellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsView.swift; sourceTree = "<group>"; };
 		C073B4FB2827F89F0027412A /* TempConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempConverterView.swift; sourceTree = "<group>"; };
 		C073B4FF282838050027412A /* FlightBookerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBookerView.swift; sourceTree = "<group>"; };
@@ -64,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				C0578D68282CF7CD00388368 /* CellsView.swift */,
+				C007466F2832761F00D2BA77 /* CellFormula.swift */,
 			);
 			path = "07 - Cells";
 			sourceTree = "<group>";
@@ -260,6 +264,7 @@
 				C073B509282942390027412A /* CrudView.swift in Sources */,
 				C073B505282910B90027412A /* TimerView.swift in Sources */,
 				C073B500282838050027412A /* FlightBookerView.swift in Sources */,
+				C00746702832761F00D2BA77 /* CellFormula.swift in Sources */,
 				C073B50D282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F32827E39700D06192 /* CounterView.swift in Sources */,
@@ -275,6 +280,7 @@
 				C073B50A282942390027412A /* CrudView.swift in Sources */,
 				C073B506282910B90027412A /* TimerView.swift in Sources */,
 				C073B501282838050027412A /* FlightBookerView.swift in Sources */,
+				C00746712832761F00D2BA77 /* CellFormula.swift in Sources */,
 				C073B50E282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C0FC32F42827E39700D06192 /* CounterView.swift in Sources */,

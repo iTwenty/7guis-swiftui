@@ -8,49 +8,58 @@
 import SwiftUI
 
 enum CellType: Hashable {
-    case empty, rowHeader(Character), colHeader(Character), data
+    case empty, rowHeader(String), colHeader(String), data
 
     static func from(row: Int, col: Int) -> CellType {
-        if row == 0, col == 0 {
-            return .empty
-        } else if row == 0 {
-            return .colHeader((Character(UnicodeScalar(col + 64)!)))
-        } else if col == 0 {
-            return .rowHeader(Character("\(row-1)"))
-        } else {
-            return .data
-        }
+        if row == 0, col == 0 { return .empty }
+        if row == 0 { return .colHeader((String(UnicodeScalar(col + 64)!))) }
+        if col == 0 { return .rowHeader("\(row)") }
+        else { return .data }
     }
 }
 
 class Cell: Identifiable, Hashable {
     let row, col: Int
     let type: CellType
-    var rawValue: String
-    var computedValue: String
+    // String as entered by user. Displayed when this cell is selected cell
+    var rawString: String
+    // String representing the "parsed" value of rawString. Displayed when
+    // this cell is highlighted cell. Can be
+    // 1. same as rawString if rawString is not a formula
+    // 2. parsed value of rawString if rawString is a valid formula
+    // 3. error if rawString is an invalid formula
+    var valueString: String
+    // int value of the cell, or nil if rawString is either non-int or
+    // invalid formula
+    var value: Int?
 
     init(row: Int, col: Int) {
         self.row = row
         self.col = col
         self.type = CellType.from(row: row, col: col)
-        self.rawValue = ""
-        self.computedValue = ""
-    }
+        self.rawString = ""
+        self.valueString = ""
+     }
 
     func recompute(grid: [[Cell]]) {
-        guard !rawValue.isEmpty else {
-            computedValue = ""
+        guard rawString.starts(with: "=") else {
+            value = Int(rawString)
+            valueString = rawString
             return
         }
-        let expression = NSExpression(format: rawValue)
-        let value = expression.expressionValue(with: nil, context: nil)
-        guard let intValue = value as? Int else {
-            computedValue = "error"
-            return
+        do {
+            value = try CellFormula.solve(String(rawString.dropFirst()), grid: grid)
+            valueString = "\(value!)" // value guaranteed to be non nil here
+        } catch let error as CellFormulaError {
+            value = nil
+            valueString = error.rawValue
+        } catch {
+            value = nil
+            valueString = "error"
         }
-        computedValue = String(intValue)
     }
 
+    // Protocol conformances
     var id: String { "\(row) \(col)" }
     static func == (lhs: Cell, rhs: Cell) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
@@ -90,16 +99,25 @@ struct CellsView: View {
 
     var body: some View {
         ScrollView([.horizontal, .vertical]) {
-            VStack(spacing: 0) {
-                ForEach($vm.cellsGrid, id: \.self) { $row in
-                    HStack(spacing: 0) {
-                        ForEach($row) { $cell in
-                            CellView(vm: vm, cell: $cell)
-                                .frame(width: 100, height: 30, alignment: (cell.type == .data ? .leading : .center))
-                                .border(Color.gray)
-                        }
-                    }
-                }
+            rowViews
+        }
+    }
+
+    @ViewBuilder private var rowViews: some View {
+        VStack(spacing: 0) {
+            ForEach($vm.cellsGrid, id: \.self) { $row in
+                cellViews($row)
+            }
+        }
+    }
+
+    @ViewBuilder private func cellViews(_ row: Binding<[Cell]>) -> some View {
+        HStack(spacing: 0) {
+            ForEach(row) { $cell in
+                let alignment: Alignment = (cell.type == .data ? .leading : .center)
+                CellView(vm: vm, cell: $cell)
+                    .frame(width: 100, height: 30, alignment: alignment)
+                    .border(Color.gray, width: 0.5)
             }
         }
     }
@@ -114,10 +132,10 @@ struct CellView: View {
         switch cell.type {
         case .empty:
             Text("")
-        case .rowHeader(let char):
-            Text("\(char)" as String)
-        case .colHeader(let char):
-            Text("\(char)" as String)
+        case .rowHeader(let title):
+            Text(title)
+        case .colHeader(let title):
+            Text(title)
         case .data:
             dataView()
         }
@@ -129,11 +147,11 @@ struct CellView: View {
         let selected = vm.selectedCell == cell
 
         ZStack {
-            Text(cell.computedValue)
+            Text(cell.valueString)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .opacity(selected ? 0 : 1)
                 .background(Color.primary.opacity(highlighted ? 0.1 : 0))
-            TextField("", text: $cell.rawValue)
+            TextField("", text: $cell.rawString)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .opacity(selected ? 1 : 0)
                 .focused($focused)
