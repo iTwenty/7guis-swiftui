@@ -18,7 +18,7 @@ struct CellsView: View {
 
     @ViewBuilder private var rowViews: some View {
         VStack(spacing: 0) {
-            ForEach($vm.cellsGrid, id: \.self) { $row in
+            ForEach($vm.grid, id: \.self) { $row in
                 cellViews($row)
             }
         }

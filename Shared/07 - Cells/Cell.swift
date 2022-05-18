@@ -24,12 +24,12 @@ class Cell: Identifiable, Hashable, CustomStringConvertible {
     // String as entered by user. Displayed when this cell is selected cell
     var rawString: String
     // String representing the "parsed" value of rawString. Displayed when
-    // this cell is highlighted cell. Can be
+    // this cell is not selected or when it is highlighted. Can be
     // 1. same as rawString if rawString is not a formula
     // 2. parsed value of rawString if rawString is a valid formula
     // 3. error if rawString is an invalid formula
     var valueString: String
-    // value of the cell, or nil if rawString is either non-int or
+    // value of the cell, or nil if rawString is either non-number or
     // invalid formula
     var value: Double?
     // Set of cells in this cell's formula. If the formula is "=A1+B1",

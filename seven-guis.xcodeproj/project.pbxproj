@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C00746702832761F00D2BA77 /* CellSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007466F2832761F00D2BA77 /* CellSolver.swift */; };
-		C00746712832761F00D2BA77 /* CellSolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007466F2832761F00D2BA77 /* CellSolver.swift */; };
 		C00746772834FCA800D2BA77 /* CellsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00746762834FCA800D2BA77 /* CellsVM.swift */; };
 		C00746782834FCA800D2BA77 /* CellsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00746762834FCA800D2BA77 /* CellsVM.swift */; };
 		C007467B2834FCDD00D2BA77 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007467A2834FCDD00D2BA77 /* Cell.swift */; };
@@ -36,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C007466F2832761F00D2BA77 /* CellSolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSolver.swift; sourceTree = "<group>"; };
 		C00746762834FCA800D2BA77 /* CellsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsVM.swift; sourceTree = "<group>"; };
 		C007467A2834FCDD00D2BA77 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		C0578D68282CF7CD00388368 /* CellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsView.swift; sourceTree = "<group>"; };
@@ -85,7 +82,6 @@
 			children = (
 				C007467A2834FCDD00D2BA77 /* Cell.swift */,
 				C00746762834FCA800D2BA77 /* CellsVM.swift */,
-				C007466F2832761F00D2BA77 /* CellSolver.swift */,
 				C0578D68282CF7CD00388368 /* CellsView.swift */,
 			);
 			path = "07 - Cells";
@@ -294,7 +290,6 @@
 				C073B505282910B90027412A /* TimerView.swift in Sources */,
 				C073B500282838050027412A /* FlightBookerView.swift in Sources */,
 				C00746772834FCA800D2BA77 /* CellsVM.swift in Sources */,
-				C00746702832761F00D2BA77 /* CellSolver.swift in Sources */,
 				C073B50D282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C007467B2834FCDD00D2BA77 /* Cell.swift in Sources */,
@@ -312,7 +307,6 @@
 				C073B506282910B90027412A /* TimerView.swift in Sources */,
 				C073B501282838050027412A /* FlightBookerView.swift in Sources */,
 				C00746782834FCA800D2BA77 /* CellsVM.swift in Sources */,
-				C00746712832761F00D2BA77 /* CellSolver.swift in Sources */,
 				C073B50E282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
 				C007467C2834FCDD00D2BA77 /* Cell.swift in Sources */,
