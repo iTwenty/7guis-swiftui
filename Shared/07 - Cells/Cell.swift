@@ -29,9 +29,12 @@ class Cell: Identifiable, Hashable, CustomStringConvertible {
     // 2. parsed value of rawString if rawString is a valid formula
     // 3. error if rawString is an invalid formula
     var valueString: String
-    // int value of the cell, or nil if rawString is either non-int or
+    // value of the cell, or nil if rawString is either non-int or
     // invalid formula
-    var value: Int?
+    var value: Double?
+    // Set of cells in this cell's formula. If the formula is "=A1+B1",
+    // then this set will contain [A1, B1]
+    // Used for change propagation when any cell's value is updated.
     var children: Set<Cell>
 
     init(row: Int, col: Int) {

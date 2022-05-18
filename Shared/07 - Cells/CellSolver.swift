@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import MathParser
 
 enum CellFormulaError: String, Error {
     case notAFormula = "Not a formula"
@@ -14,16 +15,26 @@ enum CellFormulaError: String, Error {
 }
 
 class CellSolver {
+    /// Regex matches strings like "A1", "B22" etc.
     private static let regex = try! NSRegularExpression(pattern: #"(?<cell>[A-Z]{1}[0-9]+)"#)
 
-    func solve(_ cell: Cell, grid: [[Cell]]) throws -> (Int, Set<Cell>) {
+
+    /// Solves the cell's formula, or throws an appropriate error.
+    /// - Parameters:
+    ///   - cell: Cell whose formula to solve
+    ///   - grid: Array of all cells in spreadsheet. Used for resolving cell references in the formula
+    /// - Returns: A tuple consisting of formula's resolved value and a set of all cell references in the
+    /// formula.
+    ///
+    /// Throws in following cases -
+    /// 1. Cell's formula doesn't begin with "=". Throws .notAFormula.
+    /// 2. Cell's formula contains ref to a cell outside the bounds of spreadsheet. Throws .cellOutOfRange.
+    /// 3. Cell's formula contains "=", but is not valid. Throws .invalidFormula.
+    func solve(_ cell: Cell, grid: [[Cell]]) throws -> (Double, Set<Cell>) {
         guard cell.rawString.starts(with: "=") else {
             throw CellFormulaError.notAFormula
         }
         let formula = String(cell.rawString.dropFirst())
-        guard !formula.isEmpty else {
-            throw CellFormulaError.invalidFormula
-        }
         var replacedFormula = formula
         let range = NSRange(formula.startIndex..<formula.endIndex, in: formula)
         let matches = Self.regex.matches(in: formula, options: [], range: range)
@@ -40,12 +51,12 @@ class CellSolver {
             children.insert(childCell)
             replacedFormula = replacedFormula.replacingOccurrences(of: cellStr, with: String(childCell.value ?? 0))
         }
-        let expression = NSExpression(format: replacedFormula)
-        let val = expression.expressionValue(with: nil, context: nil)
-        guard let val = val as? Int else {
+        do {
+            let value = try replacedFormula.evaluate()
+            return (value, children)
+        } catch {
             throw CellFormulaError.invalidFormula
         }
-        return (val, children)
     }
 }
 

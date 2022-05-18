@@ -13,6 +13,8 @@
 		C00746782834FCA800D2BA77 /* CellsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00746762834FCA800D2BA77 /* CellsVM.swift */; };
 		C007467B2834FCDD00D2BA77 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007467A2834FCDD00D2BA77 /* Cell.swift */; };
 		C007467C2834FCDD00D2BA77 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007467A2834FCDD00D2BA77 /* Cell.swift */; };
+		C007467F28350B6E00D2BA77 /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = C007467E28350B6E00D2BA77 /* MathParser */; };
+		C007468228350C8B00D2BA77 /* MathParser in Frameworks */ = {isa = PBXBuildFile; productRef = C007468128350C8B00D2BA77 /* MathParser */; };
 		C0578D69282CF7CD00388368 /* CellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0578D68282CF7CD00388368 /* CellsView.swift */; };
 		C0578D6A282CF7FA00388368 /* CellsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0578D68282CF7CD00388368 /* CellsView.swift */; };
 		C073B4FC2827F89F0027412A /* TempConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C073B4FB2827F89F0027412A /* TempConverterView.swift */; };
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C007467F28350B6E00D2BA77 /* MathParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,12 +66,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C007468228350C8B00D2BA77 /* MathParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C007468028350C8B00D2BA77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0578D67282CF35600388368 /* 07 - Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +137,7 @@
 				C0FC32D22827E2A800D06192 /* Shared */,
 				C0FC32E12827E2AA00D06192 /* macOS */,
 				C0FC32DB2827E2AA00D06192 /* Products */,
+				C007468028350C8B00D2BA77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +198,9 @@
 			dependencies = (
 			);
 			name = "seven-guis (iOS)";
+			packageProductDependencies = (
+				C007467E28350B6E00D2BA77 /* MathParser */,
+			);
 			productName = "seven-guis (iOS)";
 			productReference = C0FC32DA2827E2AA00D06192 /* seven-guis.app */;
 			productType = "com.apple.product-type.application";
@@ -203,6 +218,9 @@
 			dependencies = (
 			);
 			name = "seven-guis (macOS)";
+			packageProductDependencies = (
+				C007468128350C8B00D2BA77 /* MathParser */,
+			);
 			productName = "seven-guis (macOS)";
 			productReference = C0FC32E02827E2AA00D06192 /* seven-guis.app */;
 			productType = "com.apple.product-type.application";
@@ -234,6 +252,9 @@
 				Base,
 			);
 			mainGroup = C0FC32CD2827E2A800D06192;
+			packageReferences = (
+				C007467D28350B6E00D2BA77 /* XCRemoteSwiftPackageReference "DDMathParser" */,
+			);
 			productRefGroup = C0FC32DB2827E2AA00D06192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -560,6 +581,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C007467D28350B6E00D2BA77 /* XCRemoteSwiftPackageReference "DDMathParser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/davedelong/DDMathParser";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C007467E28350B6E00D2BA77 /* MathParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C007467D28350B6E00D2BA77 /* XCRemoteSwiftPackageReference "DDMathParser" */;
+			productName = MathParser;
+		};
+		C007468128350C8B00D2BA77 /* MathParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C007467D28350B6E00D2BA77 /* XCRemoteSwiftPackageReference "DDMathParser" */;
+			productName = MathParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C0FC32CE2827E2A800D06192 /* Project object */;
 }

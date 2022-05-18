@@ -44,10 +44,10 @@ class CellsVM: ObservableObject {
         do {
             let (val, children) = try solver.solve(cell, grid: cellsGrid)
             cell.value = val
-            cell.valueString = "\(val)"
+            cell.valueString = String(format: "%.2f", val)
             newChildren = children
         } catch CellFormulaError.notAFormula {
-            cell.value = Int(cell.rawString)
+            cell.value = Double(cell.rawString)
             cell.valueString = cell.rawString
         } catch let error as CellFormulaError {
             cell.value = nil
@@ -74,6 +74,5 @@ class CellsVM: ObservableObject {
             parents[child] = parentCells
         }
         cell.children = children
-        print(parents)
     }
 }
