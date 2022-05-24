@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6329DAD6283791030076E7DF /* CircleDrawerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329DAD5283791030076E7DF /* CircleDrawerVM.swift */; };
+		6329DAD7283791030076E7DF /* CircleDrawerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6329DAD5283791030076E7DF /* CircleDrawerVM.swift */; };
 		C00746772834FCA800D2BA77 /* CellsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00746762834FCA800D2BA77 /* CellsVM.swift */; };
 		C00746782834FCA800D2BA77 /* CellsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00746762834FCA800D2BA77 /* CellsVM.swift */; };
 		C007467B2834FCDD00D2BA77 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C007467A2834FCDD00D2BA77 /* Cell.swift */; };
@@ -34,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6329DAD5283791030076E7DF /* CircleDrawerVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleDrawerVM.swift; sourceTree = "<group>"; };
 		C00746762834FCA800D2BA77 /* CellsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsVM.swift; sourceTree = "<group>"; };
 		C007467A2834FCDD00D2BA77 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		C0578D68282CF7CD00388368 /* CellsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsView.swift; sourceTree = "<group>"; };
@@ -122,6 +125,7 @@
 		C073B50B282A44580027412A /* 06 - Circle Drawer */ = {
 			isa = PBXGroup;
 			children = (
+				6329DAD5283791030076E7DF /* CircleDrawerVM.swift */,
 				C073B50C282A44770027412A /* CircleDrawerView.swift */,
 			);
 			path = "06 - Circle Drawer";
@@ -289,6 +293,7 @@
 				C073B509282942390027412A /* CrudView.swift in Sources */,
 				C073B505282910B90027412A /* TimerView.swift in Sources */,
 				C073B500282838050027412A /* FlightBookerView.swift in Sources */,
+				6329DAD6283791030076E7DF /* CircleDrawerVM.swift in Sources */,
 				C00746772834FCA800D2BA77 /* CellsVM.swift in Sources */,
 				C073B50D282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E32827E2AA00D06192 /* SevenGuisApp.swift in Sources */,
@@ -306,6 +311,7 @@
 				C073B50A282942390027412A /* CrudView.swift in Sources */,
 				C073B506282910B90027412A /* TimerView.swift in Sources */,
 				C073B501282838050027412A /* FlightBookerView.swift in Sources */,
+				6329DAD7283791030076E7DF /* CircleDrawerVM.swift in Sources */,
 				C00746782834FCA800D2BA77 /* CellsVM.swift in Sources */,
 				C073B50E282A44770027412A /* CircleDrawerView.swift in Sources */,
 				C0FC32E42827E2AA00D06192 /* SevenGuisApp.swift in Sources */,

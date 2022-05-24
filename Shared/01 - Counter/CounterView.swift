@@ -17,6 +17,8 @@ struct CounterView: View {
                 counter += 1
             }
         }
+        .padding()
+        .border(Color.secondary)
     }
 }
 

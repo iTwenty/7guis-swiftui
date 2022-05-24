@@ -41,6 +41,8 @@ struct TimerView: View {
             }
         }
         .frame(width: 300)
+        .padding()
+        .border(Color.secondary)
         .onReceive(timer) { _ in
             let new = elapsed + tick
             if new <= total {

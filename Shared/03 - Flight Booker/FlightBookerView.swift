@@ -60,7 +60,10 @@ struct FlightBookerView: View {
                 Text(confirmationMesssage).padding()
             }
             Text("Date format is dd.mm.yyyy. eg - 02.09.1990").font(.caption2)
-        }.frame(width: 300)
+        }
+        .frame(width: 300)
+        .padding()
+        .border(Color.secondary)
     }
 
     private var returnTextFieldBackgroundOpacity: CGFloat {

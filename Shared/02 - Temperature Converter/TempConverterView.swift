@@ -26,35 +26,33 @@ struct TempConverterView: View {
     @State var farenChangeSource = ChangeSource.user
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 TextField("", text: $celsiusString)
-                    .onChange(of: celsiusString) { newValue in
-                        if case .user = celsiusChangeSource {
-                            if let c = Double(newValue) {
-                                farenChangeSource = .indirect
-                                farenString = String(format: "%.1f", c2f(c))
-                            }
+                    .onChange(of: celsiusString) {
+                        if case .user = celsiusChangeSource, let c = Double($0) {
+                            farenChangeSource = .indirect
+                            farenString = String(format: "%.1f", c2f(c))
                         }
                         celsiusChangeSource = .user
-                    }
+                    }.frame(width: 200)
                 Text("Celsius")
             }
             Text("=")
             HStack {
                 TextField("", text: $farenString)
-                    .onChange(of: farenString) { newValue in
-                        if case .user = farenChangeSource {
-                            if let f = Double(newValue) {
-                                celsiusChangeSource = .indirect
-                                celsiusString = String(format: "%.1f", f2c(f))
-                            }
+                    .onChange(of: farenString) {
+                        if case .user = farenChangeSource, let f = Double($0) {
+                            celsiusChangeSource = .indirect
+                            celsiusString = String(format: "%.1f", f2c(f))
                         }
                         farenChangeSource = .user
-                    }
+                    }.frame(width: 200)
                 Text("Farenheit")
             }
-        }.frame(width: 300)
+        }
+        .padding()
+        .border(Color.secondary)
     }
     private func c2f(_ c: Double) -> Double { c * 9 / 5 + 32 }
     private func f2c(_ f: Double) -> Double { (f - 32) * 5 / 9 }
